@@ -55,6 +55,17 @@ img {
             background-color: #C1EA00;
         }
     }
+
+    &_secondary {
+        padding: 24px 48px;
+        color: $color-white;
+        background-color: $color-dark;
+
+        &:hover {
+            color: $color-green;
+            box-shadow: 4px 4px 24px #D2FF00;
+        }
+    }
 }
 
 .section {

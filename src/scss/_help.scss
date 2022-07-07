@@ -1,0 +1,43 @@
+.help {
+  padding: 130px 0 200px;
+
+  &__title {
+    margin-bottom: 100px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 48px;
+    padding: 0 90px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(330.85deg, rgba(103, 125, 0, 0.8) 1.86%, rgba(210, 255, 0, 0) 102.31%), #D2FF00;
+    border-radius: 4px;
+    padding: 10px 40px 55px;
+    flex: 1;
+    text-align: center;
+  }
+
+  &__item-img {
+    margin-bottom: 16px;
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 24px;
+    margin-bottom: 60px;
+    flex: 1;
+  }
+
+  &__item-button {
+    display: block;
+    padding: 24px 0;
+    text-align: center;
+    align-self: stretch;
+  }
+}
