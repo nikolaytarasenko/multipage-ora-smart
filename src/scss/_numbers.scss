@@ -1,0 +1,49 @@
+.numbers {
+  padding: 80px 0 160px;
+  background-color: $color-white;
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 32px;
+    padding: 0 100px;
+  }
+
+  &__item {
+    position: relative;
+    flex: 1;
+    padding: 40px;
+    background: linear-gradient(330.85deg, rgba(103, 125, 0, 0.8) 1.86%, rgba(210, 255, 0, 0) 102.31%), #D2FF00;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  &__item-number {
+    position: absolute;
+    font-weight: 700;
+    top: 18px;
+    left: -23px;
+    font-size: 191px;
+    line-height: 213px;
+    letter-spacing: -0.09em;
+    text-transform: uppercase;
+    color: rgba(28,28,28,.15);
+  }
+
+  &__item-icon {
+    min-height: 179px;
+    margin-bottom: 47px;
+  }
+
+  &__item-text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: $color-dark;
+  }
+}
