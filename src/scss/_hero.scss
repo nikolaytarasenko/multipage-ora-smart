@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  padding: 0;
 
   &__img {
     position: absolute;
@@ -20,6 +21,7 @@
   &__title {
     color: $color-white;
     text-transform: uppercase;
+    text-align: left;
   }
 
   &__subtitle {
