@@ -1,0 +1,48 @@
+.mission {
+  padding: 30px 0;
+
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__col {
+    flex: 1;
+  }
+
+  &__title {
+    color: $color-white;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 49px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    max-width: 510px;
+    color: $color-green;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__img-wrapper {
+    text-align: right;
+  }
+
+  &__info {
+    max-width: 924px;
+    margin: 32px auto 0;
+  }
+
+  &__info-text {
+    color: $color-green;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
