@@ -1,4 +1,39 @@
-// Footer
-footer {
-    display: block;
+.footer {
+    padding: 85px 0;
+    background: linear-gradient(180deg, rgba(28, 28, 28, 0) 11.98%, #000000 100%);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__logo {
+        margin-bottom: 35px;
+
+        path {
+            transition: 0.15s ease-out;
+        }
+
+        &:hover {
+            path {
+                fill: $color-green;
+            }
+        }
+    }
+}
+
+.copyright {
+    text-align: center;
+
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: rgba(255, 255, 255, 0.7);
+
+        &:first-child {
+            margin-bottom: 5px;
+        }
+    }
 }
