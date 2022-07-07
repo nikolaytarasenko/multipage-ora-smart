@@ -1,0 +1,33 @@
+.hero {
+  position: relative;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__content {
+    max-width: 550px;
+    min-height: 674px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    color: $color-white;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37px;
+    margin-bottom: 16px;
+    color: $color-green;
+    text-transform: uppercase;
+  }
+}
