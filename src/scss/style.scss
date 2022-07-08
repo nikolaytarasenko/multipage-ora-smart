@@ -3,6 +3,7 @@
 @import './vars';
 @import './reset';
 @import './global';
+@import './switcher';
 
 // Sections or Pages SCSS-files imports
  @import './header';
@@ -19,6 +20,7 @@
  @import './steps';
  @import './payment';
  @import './open';
+ @import './deposits';
 
  @import './footer';
 
