@@ -1,0 +1,29 @@
+.journey {
+  padding: 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 750px;
+    margin: 0 auto;
+    min-height: 674px;
+  }
+
+  &__title {
+    margin-top: 226px;
+    margin-bottom: 155px;
+    font-weight: 700;
+    font-size: 51px;
+    line-height: 59px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-green;
+  }
+
+  &__arrow-link {
+    display: inline-block;
+    margin-bottom: 100px;
+  }
+}
