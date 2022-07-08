@@ -22,6 +22,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $font-family;
     background-color: $color-dark;
