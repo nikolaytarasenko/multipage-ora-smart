@@ -23,7 +23,6 @@
   }
 
   &__arrow-link {
-    display: inline-block;
-    margin-bottom: 100px;
+    @include arrow-down;
   }
 }

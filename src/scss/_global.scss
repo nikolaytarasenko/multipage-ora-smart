@@ -5,19 +5,23 @@
     margin: 0 auto;
     padding: 0 $containerSidePadding + px;
 
-    @media (max-width: $breakpoint1450) {
+    @media (max-width: $screen-xll) {
         max-width: 1300px;
     }
 
-    @media (max-width: $breakpoint992) {
-        max-width: 970px;
+    @media (max-width: $screen-xl) {
+        max-width: 1170px;
     }
 
-    @media (max-width: $breakpoint768) {
-        max-width: 740px;
+    @media (max-width: $screen-lg) {
+        max-width: 960px;
     }
 
-    @media (max-width: $breakpoint480) {
+    @media (max-width: $screen-md) {
+        max-width: 720px;
+    }
+
+    @media (max-width: $screen-sm) {
         max-width: none;
     }
 }
@@ -75,11 +79,20 @@ img {
 .section {
     padding: 80px 0;
 
+    @include lg {
+        padding: 50px 0;
+    }
+
     &__title {
         font-size: 48px;
         font-weight: 700;
         line-height: 56px;
         text-align: center;
+
+        @include md {
+            font-size: 36px;
+            line-height: 42px;
+        }
     }
 }
 

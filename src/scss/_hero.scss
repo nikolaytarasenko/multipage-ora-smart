@@ -7,6 +7,13 @@
     top: 0;
     right: 0;
     z-index: -1;
+
+    @include lg {
+      display: block;
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 
   &__content {
@@ -16,12 +23,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include lg {
+      min-height: unset;
+      margin: 100px auto;
+    }
+
+    @include md {
+      max-width: 345px;
+      margin: 80px auto;
+    }
   }
 
   &__title {
     color: $color-white;
     text-transform: uppercase;
     text-align: left;
+
+    @include md {
+      font-size: 34px;
+      line-height: 39px;
+    }
+
+    @include custom(385) {
+      font-size: 28px;
+      line-height: 32px;
+    }
   }
 
   &__subtitle {
@@ -31,5 +58,10 @@
     margin-bottom: 16px;
     color: $color-green;
     text-transform: uppercase;
+
+    @include md {
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 }

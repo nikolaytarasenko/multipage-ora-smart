@@ -1,0 +1,55 @@
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+// Extra large devices, less than 1400px
+@mixin xxl {
+  @media (max-width: #{$screen-xxl}) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin custom($screen) {
+  @media (max-width: $screen+'px') {
+    @content;
+  }
+}
+
+@mixin arrow-down {
+  display: inline-block;
+  margin-bottom: 100px;
+  animation: fade-in-out 1.4s ease-in-out infinite alternate;
+  transition: 0.15s ease-in-out;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    animation-play-state: paused;
+  }
+}

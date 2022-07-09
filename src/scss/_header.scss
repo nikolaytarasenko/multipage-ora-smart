@@ -41,6 +41,10 @@ nav {
   &__item {
     margin-left: 50px;
 
+    @include xl {
+      margin-left: 26px;
+    }
+
     &:first-child {
       margin-left: 0;
     }
@@ -175,13 +179,13 @@ nav {
         background: $burgerActiveColor;
         transform: rotate(45deg);
         transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-        top: 8px;
+        top: 6px;
       }
 
       &:after {
         background: $burgerActiveColor;
         transform: rotate(-45deg);
-        bottom: 10px;
+        bottom: 9px;
         transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
       }
 
@@ -194,14 +198,15 @@ nav {
     &:after {
       content: '';
       position: absolute;
-      height: 2px;
+      height: 5px;
+      border-radius: 10px;
       width: 100%;
       background: $burgerColor;
       transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
     }
 
     &:before {
-      top: 0;
+      top: -1px;
     }
 
     &::after {
@@ -210,11 +215,12 @@ nav {
 
     span {
       position: absolute;
-      top: 9px;
+      top: 7px;
       right: 0;
       width: 100%;
       background: $burgerColor;
-      height: 2px;
+      height: 5px;
+      border-radius: 10px;
       transform: scale(1);
       transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
     }

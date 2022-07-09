@@ -1,0 +1,35 @@
+// Container & Breakpoints
+@use 'sass:math';
+$containerWidth: 1300;
+$containerPadding: 40;
+$containerSidePadding: math.div($containerPadding, 2);
+//$breakpoint1450: 1449.98 + px;
+//$breakpoint1200: 1119.98 + px;
+//$breakpoint992: 991.98 + px;
+//$breakpoint768: 767.98 + px;
+//$breakpoint480: 479.98 + px;
+
+// Small tablets and large smartphones
+$screen-sm: 575.98px;
+// Small tablets
+$screen-md: 767.98px;
+// Tablets and small desktops
+$screen-lg: 991.98px;
+// Large tablets and desktops
+$screen-xl: 1199.98px;
+// Large desktops, over than 1400px
+$screen-xll: 1399.98px;
+
+// Burger Menu
+$burgerBreakpoint: $screen-lg;
+$burgerColor: #FFFFFF;
+$burgerActiveColor: 'white';
+
+// Fonts
+$font-family: 'Play', Arial, sans-serif;
+
+// Colors
+$color-black: #000000;
+$color-dark: #1C1C1C;
+$color-white: #FFFFFF;
+$color-green: #D2FF00;

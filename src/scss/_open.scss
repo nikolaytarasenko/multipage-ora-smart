@@ -40,30 +40,6 @@
   }
 
   &__arrow-link {
-    margin-bottom: 100px;
-    animation: fade-in-out 1.4s ease-in-out infinite alternate;
-    transition: 0.15s ease-in-out;
-    transform: scale(1);
-
-    &:hover {
-      transform: scale(1.2);
-      opacity: 1;
-      animation-play-state: paused;
-    }
-  }
-}
-
-@keyframes fade-in-out {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.4;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+    @include arrow-down;
   }
 }

@@ -1,15 +1,31 @@
 .help {
   padding: 130px 0 200px;
 
+  @include lg {
+    padding: 50px 0;
+  }
+
   &__title {
     margin-bottom: 100px;
     color: $color-green;
+
+    @include sm {
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
     display: flex;
     gap: 48px;
     padding: 0 90px;
+
+    @include lg {
+      padding: 0;
+    }
+
+    @include md {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -37,7 +53,7 @@
 
   &__item-button {
     display: block;
-    padding: 24px 0;
+    padding: 24px 5px;
     text-align: center;
     align-self: stretch;
   }

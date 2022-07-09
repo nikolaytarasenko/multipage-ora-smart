@@ -37,7 +37,9 @@ let { src, dest } = require('gulp'),
     clean_css = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify-es').default,
-    imagemin = require('gulp-imagemin')
+    imagemin = require('gulp-imagemin'),
+    sourcemaps = require('gulp-sourcemaps'),
+    plumber = require('gulp-plumber');
 
 // Browser Sync
 function browserSync(params) {
@@ -102,25 +104,22 @@ function js() {
 // CSS
 function css() {
     return src(path.src.css)
-        .pipe(
-            scss({
-                outputStyle: 'expanded',
-            }),
-        )
-        .pipe(group_media())
-        .pipe(
-            autoprefixer({
-                cascade: true,
-                overrideBrowserslist: ['last 5 versions'],
-            }),
-        )
-        .pipe(dest(path.build.css))
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(scss({
+          outputStyle: 'expanded',
+        }),)
+        .pipe(autoprefixer({
+          cascade: true,
+          overrideBrowserslist: ['last 5 versions'],
+        }))
         .pipe(clean_css())
         .pipe(
             rename({
-                extname: '.min.css',
+              extname: '.min.css',
             }),
         )
+        .pipe(sourcemaps.write('.'))
         .pipe(dest(path.build.css))
         .pipe(browsersync.stream())
 }

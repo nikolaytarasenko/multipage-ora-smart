@@ -1,13 +1,18 @@
-// Global SCSS-files imports
-@import './fonts';
-@import './vars';
-@import './reset';
+// Utils
+@import 'utils/fonts';
+@import 'utils/reset';
+@import 'utils/vars';
+@import 'utils/mixins';
+
+// Global
 @import './global';
+
+// Components
 @import './switcher';
+@import './keyframes';
 
-// Sections or Pages SCSS-files imports
+// Sections
  @import './header';
-
  @import './hero';
  @import './market';
  @import './ecosystem';
@@ -21,8 +26,4 @@
  @import './payment';
  @import './open';
  @import './deposits';
-
  @import './footer';
-
-// Libs
-// @import './libs/swiper';
