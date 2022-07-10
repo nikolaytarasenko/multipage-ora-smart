@@ -4,6 +4,10 @@
   &__row {
     display: flex;
     align-items: center;
+
+    @include md {
+      flex-direction: column;
+    }
   }
 
   &__col {
@@ -16,6 +20,20 @@
     font-size: 42px;
     line-height: 49px;
     text-transform: uppercase;
+
+    @include lg {
+      font-size: 34px;
+      line-height: 39px;
+    }
+
+    @include md {
+      margin-bottom: 20px;
+    }
+
+    @include custom(375) {
+      font-size: 22px;
+      line-height: 30px;
+    }
   }
 
   &__subtitle {
@@ -26,6 +44,11 @@
     line-height: 37px;
     text-transform: uppercase;
     margin-bottom: 16px;
+
+    @include lg {
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 
   &__img-wrapper {
@@ -44,5 +67,10 @@
     line-height: 21px;
     text-align: center;
     text-transform: uppercase;
+
+    @include lg {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 }
