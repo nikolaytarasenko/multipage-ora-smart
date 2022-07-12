@@ -1,0 +1,12 @@
+.feedback {
+  &__title {
+    color: $color-green;
+    max-width: 788px;
+    margin: 0 auto 72px;
+  }
+
+  &__form {
+    max-width: 632px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,36 @@
+.form {
+  background: $color-green;
+  box-shadow: 8px 8px 36px rgba(255, 36, 85, 0.1);
+  border-radius: 16px;
+  padding: 80px 64px;
+
+  &__control {
+    &:not(:last-child) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 24px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.75);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    font-family: inherit;
+  }
+
+  &__submit {
+    display: block;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

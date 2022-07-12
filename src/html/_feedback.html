@@ -1,0 +1,30 @@
+<section class="section feedback">
+  <div class="container">
+    <h2 class="section__title feedback__title">Заполните анкету и мы свяжемся с вами для обсуждения деталей.</h2>
+    <form class="feedback__form form">
+      <div class="form__control">
+        <label>
+          <input class="form__input" type="text" placeholder="Название компании">
+        </label>
+      </div>
+      <div class="form__control">
+        <label>
+          <input class="form__input" type="text" placeholder="Краткое описание">
+        </label>
+      </div>
+      <div class="form__control">
+        <label>
+          <input class="form__input" type="text" placeholder="Имя">
+        </label>
+      </div>
+      <div class="form__control">
+        <label>
+          <input class="form__input" type="text" placeholder="E-mail или телефон" name="contact" pattern="\+[0-9]{1,4}[0-9]{1,10}|(.*)@(.*)\.[a-z]{2,5}" title="" oninvalid="setCustomValidity('Пожалуйста, введите номер телефона или email')">
+        </label>
+      </div>
+      <div class="form__control">
+        <input class="form__submit button button_secondary" type="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+      </div>
+    </form>
+  </div>
+</section>
