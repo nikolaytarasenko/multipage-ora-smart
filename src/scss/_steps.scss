@@ -1,15 +1,50 @@
 .steps {
   background-color: $color-white;
   padding: 200px 0 0;
+  overflow-x: hidden;
+
+  @include md {
+    overflow: hidden;
+    padding-top: 60px;
+  }
+
+  &__img-wrapper {
+    @include md {
+      order: 1;
+      background: url("../img/steps-img.png") center no-repeat;
+      background-size: 522px 294px;
+      height: 294px;
+    }
+  }
 
   &__img {
     max-width: unset;
     position: relative;
     right: -222px;
+
+    @include lg {
+      right: 30px;
+    }
+
+    @include md {
+      right: 100px;
+      width: 700px;
+      display: none;
+    }
   }
   
   &__list {
     position: relative;
+
+    @include xl {
+      margin-left: -120px;
+    }
+
+    @include md {
+      display: flex;
+      flex-direction: column;
+      margin-left: unset;
+    }
   }
 
   &__item {
@@ -17,9 +52,26 @@
     padding: 11px 24px;
     background: linear-gradient(264.56deg, rgba(0, 0, 0, 0.2) -11.94%, rgba(0, 0, 0, 0) 97.37%), #D2FF00;
 
+    @include md {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 45px;
+    }
+
+    @include md {
+      max-width: 240px;
+      margin: 0 auto 45px;
+    }
+
     &_1 {
       bottom: 264px;
       left: 86px;
+
+      @include md {
+        bottom: unset;
+        left: unset;
+      }
 
       .steps__item-text {
         max-width: 250px;
@@ -28,29 +80,79 @@
       .steps__lines {
         top: -4px;
         left: 112px;
+
+        @include md {
+          left: 6px;
+        }
       }
 
       .steps__line {
         &_first {
           width: 592px;
+
+          @include lg {
+            width: 330px;
+          }
+
+          @include md {
+            width: 185px;
+            left: -65px;
+            top: -10px;
+            border-radius: 0 4px 4px 0;
+          }
         }
 
         &_second {
           width: 40px;
           left: 570px;
           top: 18px;
+
+          @include lg {
+            width: 30px;
+            left: 313px;
+            top: 14px;
+          }
+
+          @include md {
+            left: -611px;
+            top: 537px;
+            width: 1096px;
+
+            &::after {
+              width: 150px;
+              right: 2px;
+              top: 2px;
+              transform: rotate(90deg);
+              transform-origin: right;
+            }
+          }
         }
       }
 
       .steps__dot {
         left: 575px;
         top: 35px;
+
+        @include lg {
+          left: 314px;
+          top: 24px;
+        }
+
+        @include md {
+          left: 82px;
+          top: 1075px;
+        }
       }
     }
 
     &_2 {
       bottom: 401px;
       left: 203px;
+
+      @include md {
+        bottom: unset;
+        left: unset;
+      }
 
       .steps__item-text {
         max-width: 340px;
@@ -65,24 +167,72 @@
         &_first {
           width: 489px;
           left: 56px;
+
+          @include lg {
+            width: 245px;
+          }
+
+          @include md {
+            width: 170px;
+            left: -170px;
+            top: -10px;
+            border-radius: 0 4px 4px 0;
+          }
         }
 
         &_second {
           width: 80px;
           left: 503px;
           top: 38px;
+
+          @include lg {
+            left: 259px;
+            top: 39px;
+          }
+
+          @include md {
+            left: -611px;
+            top: 433px;
+            width: 886px;
+
+            &::after {
+              width: 180px;
+              right: 2px;
+              top: 2px;
+              transform: rotate(90deg);
+              transform-origin: right;
+            }
+          }
         }
       }
 
       .steps__dot {
         left: 529px;
         top: 76px;
+
+        @include lg {
+          left: 285px;
+        }
+
+        @include md {
+          left: 4px;
+          top: 865px;
+        }
       }
     }
 
     &_3 {
       bottom: 523px;
       left: 387px;
+
+      @include lg {
+        left: 273px;
+      }
+
+      @include md {
+        bottom: unset;
+        left: unset;
+      }
 
       .steps__item-text {
         max-width: 340px;
@@ -99,18 +249,57 @@
         &_first {
           width: 368px;
           left: 107px;
+
+          @include lg {
+            width: 225px;
+          }
+
+          @include md {
+            width: 170px;
+            left: -31px;
+            top: -10px;
+            border-radius: 4px 0 0 4px;
+          }
         }
 
         &_second {
           width: 104px;
           left: 421px;
           top: 50px;
+
+          @include lg {
+            left: 278px;
+          }
+
+          @include md {
+            left: -166px;
+            top: 293px;
+            width: 606px;
+
+            &::after {
+              width: 64px;
+              right: 2px;
+              top: 2px;
+              transform: rotate(270deg);
+              transform-origin: right;
+            }
+          }
         }
       }
 
       .steps__dot {
         left: 459px;
         top: 98px;
+
+        @include lg {
+          left: 316px;
+          top: 99px;
+        }
+
+        @include md {
+          left: 63px;
+          top: 585px;
+        }
       }
     }
 
@@ -118,10 +307,23 @@
       bottom: 665px;
       left: 458px;
 
+      @include lg {
+        left: 297px;
+      }
+
+      @include md {
+        bottom: unset;
+        left: unset;
+      }
+
       .steps__item-text {
         max-width: 485px;
         font-size: 16px;
         line-height: 19px;
+
+        @include lg {
+          max-width: 450px;
+        }
       }
 
       .steps__lines {
@@ -133,18 +335,69 @@
         &_first {
           width: 366px;
           left: 135px;
+
+          @include lg {
+            width: 288px;
+          }
+
+          @include md {
+            width: 154px;
+            left: -31px;
+            top: -10px;
+            border-radius: 4px 0 0 4px;
+          }
         }
 
         &_second {
           width: 160px;
           left: 419px;
           top: 78px;
+
+          @include lg {
+            width: 182px;
+            left: 330px;
+            top: 90px;
+          }
+
+          @include md {
+            left: -52px;
+            top: 164px;
+            width: 346px;
+
+            &::after {
+              width: 15px;
+              right: 2px;
+              top: 2px;
+              transform: rotate(270deg);
+              transform-origin: right;
+            }
+          }
+
+          @include custom(375) {
+            &::after {
+              display: none;
+            }
+          }
         }
       }
 
       .steps__dot {
         left: 485px;
         top: 150px;
+
+        @include lg {
+          left: 406px;
+          top: 174px;
+        }
+
+        @include md {
+          left: 95px;
+          top: 326px;
+        }
+
+        @include custom(375) {
+          left: 110px;
+        }
       }
     }
   }
@@ -155,6 +408,8 @@
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
+    word-break: break-word;
+    hyphens: manual;
   }
 
   &__item-text {
@@ -166,6 +421,12 @@
 
   &__lines {
     position: absolute;
+    
+    @include md {
+      position: relative;
+      order: -1;
+      width: 100%;
+    }
   }
 
   &__line {
@@ -179,6 +440,15 @@
 
     &_second {
       transform: rotate(90deg);
+
+      &::after {
+        @include md {
+          content: '';
+          position: absolute;
+          background-color: $color-dark;
+          height: 4px;
+        }
+      }
     }
   }
 
@@ -188,5 +458,10 @@
     height: 29px;
     border-radius: 50%;
     background-color: $color-dark;
+
+    @include md {
+      width: 21px;
+      height: 21px;
+    }
   }
 }

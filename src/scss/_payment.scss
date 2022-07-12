@@ -1,6 +1,10 @@
 .payment {
   padding: 80px 0 160px;
 
+  @include md {
+    padding: 50px 0;
+  }
+
   &__title {
     max-width: 760px;
     margin: 0 auto 72px;
@@ -12,10 +16,20 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+
+    @include md {
+      flex-direction: column;
+    }
   }
 
   &__item {
     flex: 1;
     text-align: center;
+
+    &:not(:last-child) {
+      @include md {
+        margin-bottom: 55px;
+      }
+    }
   }
 }
