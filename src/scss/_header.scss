@@ -51,6 +51,10 @@ nav {
 
     &:first-child {
       margin-left: 0;
+
+      @include lg {
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -66,8 +70,10 @@ nav {
       display: block;
     }
 
-    &:hover {
-      color: $color-green;
+    @media (min-width: 992px) {
+      &:hover {
+        color: $color-green;
+      }
     }
 
     &.button_primary {
@@ -79,15 +85,39 @@ nav {
 
 
 .dropdown {
+  @media (min-width: 992px) {
+    &:hover {
+      .dropdown__menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50px, 0);
+      }
 
-  &:hover {
+      .dropdown__toggle {
+        color: $color-green;
+      }
+
+      .dropdown__arrow-down {
+        transform: rotate(180deg);
+
+        path {
+          fill: $color-green;
+        }
+      }
+    }
+  }
+
+  &.opened {
     .dropdown__menu {
+      position: relative;
+      transform: translate(0, 0);
       opacity: 1;
       visibility: visible;
-      transform: translate(-50px, 0);
+      max-height: 212px;
+      padding: 10px 24px;
     }
 
-    .dropdown__toggle {
+    .menu__item-link {
       color: $color-green;
     }
 
@@ -105,6 +135,10 @@ nav {
     display: flex;
     align-items: center;
     gap: 4px;
+
+    @include lg {
+      justify-content: center;
+    }
   }
 
   &__arrow-down {
@@ -125,8 +159,15 @@ nav {
     min-width: 160px;
     padding: 10px 24px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    transition: 0.2s ease-out;
+    transition: 0.2s ease-in-out;
     z-index: 10;
+
+    @include lg {
+      position: relative;
+      padding: 0;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+    }
   }
 
   &__menu-link {
@@ -135,8 +176,17 @@ nav {
     padding: 16px 0;
     transition: 0.15s ease-out;
 
+    @include lg {
+      font-size: 14px;
+    }
+
     &:hover {
       color: $color-green;
+    }
+
+    &:active,
+    &:focus {
+      color: $color-white;
     }
   }
 }
@@ -236,7 +286,7 @@ nav {
 
   // .menu__item
   .menu__item {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   // .menu__link

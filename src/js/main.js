@@ -40,3 +40,48 @@ function fixedNav() {
   }
 }
 window.addEventListener('scroll', fixedNav)
+
+// toggle burger dropdown
+
+const toggleBurgerDropdown = () => {
+  const screenWidth = window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth;
+
+  if (screenWidth < 992) {
+    const dropdownLinks = document.querySelectorAll('.dropdown__toggle');
+
+    dropdownLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const link = e.target;
+
+        link.parentElement.classList.toggle('opened');
+      });
+    })
+  }
+}
+
+const closeBurgerDropdown = () => {
+  const screenWidth = window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth;
+
+  if (screenWidth >= 992) {
+    const menuItems = document.querySelectorAll('.menu__item');
+
+    menuItems.forEach(item => {
+      item.classList.remove('opened');
+    });
+  }
+}
+
+const resizeHandler = () => {
+  closeBurgerDropdown();
+}
+
+const domContentLoadedHandler = () => {
+  toggleBurgerDropdown();
+}
+
+window.addEventListener('DOMContentLoaded', domContentLoadedHandler);
+window.addEventListener('resize', resizeHandler);
