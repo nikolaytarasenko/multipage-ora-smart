@@ -3,6 +3,14 @@
 
   &__title {
     margin-bottom: 60px;
+
+    @include sm {
+      margin-bottom: 40px;
+    }
+
+    @include custom(375) {
+      font-size: 32px;
+    }
   }
 
   &__list {
@@ -13,6 +21,10 @@
   &__item {
     display: flex;
     align-items: center;
+
+    @include sm {
+      align-items: flex-start;
+    }
 
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -50,5 +62,16 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 37px;
+
+    @include sm {
+      font-size: 24px;
+      line-height: 28px;
+      word-break: break-word;
+    }
+
+    @include custom(375) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }

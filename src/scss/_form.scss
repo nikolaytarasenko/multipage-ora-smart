@@ -4,6 +4,10 @@
   border-radius: 16px;
   padding: 80px 64px;
 
+  @include md {
+    padding: 48px 24px;
+  }
+
   &__control {
     &:not(:last-child) {
       margin-bottom: 27px;
@@ -21,6 +25,10 @@
     background: rgba(255, 255, 255, 0.5);
     border-radius: 4px;
     font-family: inherit;
+
+    @include custom(375) {
+      font-size: 19px;
+    }
   }
 
   &__submit {
@@ -32,5 +40,10 @@
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
+
+    @include custom(375) {
+      margin: 0;
+      width: 100%;
+    }
   }
 }

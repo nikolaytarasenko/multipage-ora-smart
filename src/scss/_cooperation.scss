@@ -5,10 +5,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include lg {
+      flex-direction: column;
+    }
   }
 
   &__content {
     max-width: 550px;
+
+    @include lg {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -18,6 +26,11 @@
     text-transform: uppercase;
     color: $color-green;
     margin-bottom: 24px;
+
+    @include md {
+      font-size: 34px;
+      line-height: 39px;
+    }
   }
 
   &__text {
@@ -25,6 +38,11 @@
     font-size: 24px;
     line-height: 28px;
     color: $color-white;
+
+    @include md {
+      font-size: 20px;
+      line-height: 23px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 30px;

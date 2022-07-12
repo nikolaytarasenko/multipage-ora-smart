@@ -3,6 +3,11 @@
     color: $color-green;
     max-width: 788px;
     margin: 0 auto 72px;
+
+    @include md {
+      font-size: 31px;
+      line-height: 36px;
+    }
   }
 
   &__form {
