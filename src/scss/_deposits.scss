@@ -6,6 +6,10 @@
     margin: 0 86px;
     box-shadow: 0 0 48px rgba(0, 0, 0, 0.09);
     border-radius: 4px;
+
+    @include custom(1080) {
+      margin: 0 auto;
+    }
   }
 
   &__header {
@@ -14,6 +18,13 @@
     gap: 10px;
     padding: 36px 24px;
     box-shadow: 0 7px 32px rgba(0, 0, 0, 0.05);
+
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: none;
+    }
   }
 
   &__title {
@@ -40,10 +51,32 @@
     align-items: center;
     padding: 12px 0;
 
+    @include lg {
+      flex-direction: column;
+      margin: 0 40px;
+      background: #F8F8F8;
+      border-radius: 4px;
+      padding: 24px 0;
+    }
+
+    @include custom(375) {
+      margin: 0 20px;
+    }
+
+    &:not(:last-child) {
+      @include lg {
+        margin-bottom: 16px;
+      }
+    }
+
     &_heading {
       margin-bottom: 15px;
       padding: 15px 0;
       background: rgba(239, 239, 239, 0.5);
+
+      @include lg {
+        display: none;
+      }
 
       .deposits__table-col {
         font-weight: 400;
@@ -55,6 +88,12 @@
   }
 
   &__table-col {
+    &:not(:last-child) {
+      @include lg {
+        margin-bottom: 16px;
+      }
+    }
+
     &:nth-child(1) {
       flex: 4;
       padding-left: 24px;

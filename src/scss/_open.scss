@@ -9,6 +9,11 @@
     max-width: 600px;
     margin: 0 auto;
     min-height: 674px;
+
+    @include md {
+      min-height: unset;
+      margin-top: 110px;
+    }
   }
 
   &__title {
@@ -17,6 +22,12 @@
     text-transform: uppercase;
     color: $color-green;
     margin-bottom: 24px;
+
+    @include md {
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 16px;
+    }
   }
 
   &__subtitle {
@@ -27,6 +38,10 @@
     text-transform: uppercase;
     color: $color-white;
     margin-bottom: 24px;
+
+    @include md {
+      margin-bottom: 16px;
+    }
   }
 
   &__description {
