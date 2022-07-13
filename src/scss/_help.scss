@@ -32,7 +32,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(330.85deg, rgba(103, 125, 0, 0.8) 1.86%, rgba(210, 255, 0, 0) 102.31%), #D2FF00;
+    //background: linear-gradient(330.85deg, rgba(103, 125, 0, 0.8) 1.86%, rgba(210, 255, 0, 0) 102.31%), #D2FF00;
     border-radius: 4px;
     padding: 10px 40px 55px;
     flex: 1;
@@ -49,6 +49,7 @@
     line-height: 24px;
     margin-bottom: 60px;
     flex: 1;
+    color: $color-green;
   }
 
   &__item-button {
@@ -56,5 +57,53 @@
     padding: 24px 5px;
     text-align: center;
     align-self: stretch;
+    background-color: $color-green;
+    color: $color-dark;
+    transform: scale(1);
+
+    border: 2px solid #000;
+    //background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+
+    //background: #000;
+    //color: $color-dark;
+    z-index: 1;
+
+    &:hover {
+      //color: $color-dark;
+      box-shadow: none;
+      color: #fff;
+
+      &::after {
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      //transform: scale(0.97) translateY(-3px);
+      //background-color: darken($color-green, 10%);
+    }
+
+    &:active {
+      //transform: translateY(-1px);
+      //box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      top: 2px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 100%;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      //background: #e0e5ec;
+      background: $color-dark;
+      transition: all 0.3s ease;
+    }
   }
 }

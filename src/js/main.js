@@ -42,46 +42,75 @@ function fixedNav() {
 window.addEventListener('scroll', fixedNav)
 
 // toggle burger dropdown
-
-const toggleBurgerDropdown = () => {
-  const screenWidth = window.innerWidth
-      || document.documentElement.clientWidth
-      || document.body.clientWidth;
-
-  if (screenWidth < 992) {
-    const dropdownLinks = document.querySelectorAll('.dropdown__toggle');
-
-    dropdownLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        const link = e.target;
-
-        link.parentElement.classList.toggle('opened');
-      });
-    })
-  }
-}
-
-const closeBurgerDropdown = () => {
+const toggleBurgerDropdown = e => {
   const screenWidth = window.innerWidth
       || document.documentElement.clientWidth
       || document.body.clientWidth;
 
   if (screenWidth >= 992) {
-    const menuItems = document.querySelectorAll('.menu__item');
+    e.preventDefault();
 
-    menuItems.forEach(item => {
-      item.classList.remove('opened');
-    });
+    return false;
+  } else {
+    const currentLink = e.target;
+
+    currentLink.parentElement.classList.toggle('opened');
   }
 }
 
+const addToggleEventsToDropdowns = () => {
+  const dropdownLinks = document.querySelectorAll('.dropdown__toggle');
+
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', toggleBurgerDropdown);
+  });
+}
+
+const closeBurgerDropdown = () => {
+  const menuItems = document.querySelectorAll('.menu__item');
+
+  menuItems.forEach(item => {
+    item.classList.remove('opened');
+  });
+}
+
+const checkBurgerDropdown = () => {
+  const screenWidth = window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth;
+
+  if (screenWidth >= 992) {
+    if (document.querySelector('.menu__item.opened')) closeBurgerDropdown();
+  }
+}
+
+const initStickyHeader = e => {
+  const header = document.querySelector('.header');
+  const scrollY = window.scrollY;
+
+  header.classList.toggle('sticky', scrollY > 0);
+}
+
+const hidePreloader = () => {
+  const preloaderWrapper = document.querySelector('.preloader-wrapper');
+
+  preloaderWrapper.classList.add('hide');
+}
+
 const resizeHandler = () => {
-  closeBurgerDropdown();
+  checkBurgerDropdown();
+}
+
+const loadHandler = () => {
+  hidePreloader();
 }
 
 const domContentLoadedHandler = () => {
-  toggleBurgerDropdown();
+  addToggleEventsToDropdowns();
+
+  window.addEventListener('scroll', initStickyHeader);
 }
 
-window.addEventListener('DOMContentLoaded', domContentLoadedHandler);
+document.addEventListener('DOMContentLoaded', domContentLoadedHandler);
+window.addEventListener('load', loadHandler);
 window.addEventListener('resize', resizeHandler);

@@ -96,6 +96,11 @@ img {
     }
 }
 
+.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .text-regular {
     font-weight: 400;
 }
@@ -106,16 +111,4 @@ img {
 
 .text-right {
     text-align: right;
-}
-
-// Animations
-// Fade
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }

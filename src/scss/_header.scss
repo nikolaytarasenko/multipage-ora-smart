@@ -42,7 +42,7 @@ nav {
     margin-left: 50px;
 
     @include xl {
-      margin-left: 26px;
+      margin-left: 19px;
     }
 
     @include lg {
@@ -134,7 +134,6 @@ nav {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 4px;
 
     @include lg {
       justify-content: center;
@@ -144,6 +143,7 @@ nav {
   &__arrow-down {
     right: -5px;
     top: 0;
+    margin-left: 5px;
     transition: 0.2s ease-out;
   }
 
