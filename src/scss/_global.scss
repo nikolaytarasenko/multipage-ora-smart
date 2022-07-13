@@ -39,6 +39,10 @@ body {
     &.locked {
         overflow: hidden;
     }
+
+    &.scrolled {
+        padding-top: 81px;
+    }
 }
 
 img {

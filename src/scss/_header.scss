@@ -1,10 +1,26 @@
-// Header
 .header {
   box-shadow: 0 4px 48px rgba(0, 0, 0, 0.25);
+  transition: 0.2s ease;
+  z-index: 99;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .navbar {
+      padding: 12px 0;
+    }
+
+    .logo__link svg {
+      max-width: 100px;
+    }
+  }
 }
-// Navbar
+
 nav {
-  background-color: #1C1C1C;;
+  background-color: #1C1C1C;
   overflow: hidden;
 }
 
@@ -15,11 +31,17 @@ nav {
   align-items: center;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: 0.2s ease;
 }
 
 .logo {
   &__link {
     display: inline-block;
+
+    svg {
+      max-width: 100%;
+      transition: 0.15s ease-out;
+    }
 
     path {
       transition: 0.15s ease-out;

@@ -89,6 +89,7 @@ const initStickyHeader = e => {
   const scrollY = window.scrollY;
 
   header.classList.toggle('sticky', scrollY > 0);
+  document.body.classList.toggle('scrolled', scrollY > 0);
 }
 
 const hidePreloader = () => {
