@@ -1,7 +1,7 @@
 .steps {
   background-color: $color-white;
   padding: 200px 0 0;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @include md {
     overflow: hidden;

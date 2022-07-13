@@ -1,3 +1,5 @@
+@@include('../../node_modules/aos/dist/aos.js');
+
 // Custom scripts
 // Мобильное меню бургер
 function burgerMenu() {
@@ -103,6 +105,13 @@ const resizeHandler = () => {
 }
 
 const loadHandler = () => {
+  AOS.init({
+    duration: 500,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false
+  });
+
   hidePreloader();
 }
 

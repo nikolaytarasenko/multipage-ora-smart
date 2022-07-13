@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   padding: 0;
+  overflow-x: hidden;
 
   &__img {
     position: absolute;

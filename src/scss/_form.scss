@@ -45,5 +45,10 @@
       margin: 0;
       width: 100%;
     }
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-dark;
+    }
   }
 }
